@@ -25,5 +25,6 @@ def processData(city, fields):
     # Replace original date and time columns into dataframe index
     cityData = cityData.drop(columns=['Time (HH:MM)', 'Date (MM/DD/YYYY)'])
     cityData = cityData.set_index(datetimelist)
+    cityData.columns = ['ghi', 'drybulbtemp', 'dewpoint', 'relativehumidity', 'windspeed']
 
     return cityData

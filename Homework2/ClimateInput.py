@@ -1,5 +1,4 @@
 import os
-# GHI (W/m^2), Dry-bulb (C), Dew-point (C), RHum (%), Wspd (m/s)
 
 
 def cityInput():
@@ -15,15 +14,19 @@ def cityInput():
 def fieldInput():
     fields = ('dewpoint', 'drybulbtemp', 'ghi', 'relativehumidity', 'windspeed')
     print(fields)
-    response = input("Enter the fields to be plotted: ")
+    response = input("Enter the fields to be plotted: ").lower()
+    responselist = response.split(' ')
+    responselist = list(set(responselist).intersection(fields))
 
-    return response
+    return responselist
 
 
 def plotInput():
-    plots = ('scatterplot', 'monthlytemp', 'hourvalues')
+    plots = ('scatterplot', 'monthlytemps', 'hourlyvalues')
     print(plots)
     response = input("Enter a plot above: ")
+    while response not in plots:
+        response = input("Invalid Response! Please enter a value listed above: ").lower()
 
     return response
 

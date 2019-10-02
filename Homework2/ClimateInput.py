@@ -1,4 +1,5 @@
 import os
+# GHI (W/m^2), Dry-bulb (C), Dew-point (C), RHum (%), Wspd (m/s)
 
 
 def cityInput():

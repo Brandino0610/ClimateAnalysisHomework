@@ -33,5 +33,6 @@ def processData(city, fields):
     cityData = cityData.drop(columns=['Time (HH:MM)', 'Date (MM/DD/YYYY)'])
     cityData = cityData.set_index(datetimelist)
     cityData.columns = ['ghi', 'drybulbtemp', 'dewpoint', 'relativehumidity', 'windspeed']
+    cityData = cityData[fields]
 
     return cityData

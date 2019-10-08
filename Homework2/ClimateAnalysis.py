@@ -24,3 +24,5 @@ dailyDataMin.plot(title='Daily Data Minimum')
 dailyDataMax.plot(title='Daily Data Maximum')
 ghiData.plot(title='GHI Hourly Data')
 plt.show()
+
+# change
